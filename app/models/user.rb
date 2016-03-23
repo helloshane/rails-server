@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
-  belongs_to :group
+  has_many :user_groups, class_name: "UserGroup"
+  has_many :groups, through: :user_groups
 
 end

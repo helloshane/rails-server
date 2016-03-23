@@ -12,5 +12,7 @@
 
 # Group.create(name: "xxoo")
 
-
+UserGroup.create(user_id: 1, group_id: 1)
+UserGroup.create(user_id: 2, group_id: 1)
+UserGroup.create(user_id: 3, group_id: 1)
 
