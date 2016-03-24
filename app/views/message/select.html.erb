@@ -1,0 +1,11 @@
+<div>
+  <h3>Talk to User: </h3>
+  <% @users.each do |user| %>
+    <%= link_to user.name, user_message_path(user) %> <br/>
+  <% end %>
+  <hr>
+  <h3>Talk to Group: </h3>
+  <% @groups.each do |group| %>    
+    <%= link_to group.name, group_message_path(group) %> <br/>
+  <% end %>
+</div>

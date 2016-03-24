@@ -20,3 +20,5 @@
 # /config/secrets.yml
 # /config/database.yml
 !/public/assets/lib
+
+.byebug_history

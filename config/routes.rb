@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+
+  root 'user#login'
+
+  resources :user, only: [] do
+    get 'login', on: :collection
+    get "login_in", on: :member
+  end
+
+  resources :message, only: [:create] do
+    get 'select', on: :collection
+    member do
+      get 'user'
+      get 'group'
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

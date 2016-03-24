@@ -1,0 +1,5 @@
+<div>
+<% @users.each do |user| %>
+  <%= link_to user.name,  login_in_user_path(user) %><br/>
+<% end %>
+</div>

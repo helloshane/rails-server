@@ -1,0 +1,14 @@
+<div class="connection-data" style="display:none">
+  <form>
+    <input type="hidden" id="from" value="<%= cookies.signed[:user_id] %>">
+    <input type="hidden" id="to" value="<%= params[:id] %>">
+    <input type="hidden" id="currentUser" value="<%= cookies.signed[:user_id] %>">
+  </form>
+</div>
+
+<h3>Talk to User[<%= @user.name %>] history: </h3>
+  <!-- <% @messages %> -->
+<hr>
+
+<h3></h3>
+<%= render partial: 'form', locals: { url: "/message?type=user" } %>
